@@ -109,8 +109,26 @@ public class UserDetailsController implements Initializable {
 
     @FXML
     void usersLessThan30Button_onClick(ActionEvent event) {
+        ObservableList<User> allUsers = tableView.getItems();
 
+        // Filter users less than 30
+        ObservableList<User> usersLessThan30 = FXCollections.observableArrayList(
+                allUsers.filtered(user -> user.getAge() < 30)
+        );
+
+        // Update the TableView with users less than 30
+        tableView.setItems(usersLessThan30);
+
+        // Update the label with the count of users less than 30
+        noOfUsersLabel.setText("No. of Users: " + usersLessThan30.size());
+
+        // Clear the addressListView when filtering users
+        addressListView.getItems().clear();
+
+        // Reset the image
+        imageView.setImage(null);
     }
+
 
 
 
