@@ -1,3 +1,5 @@
+package com.georgiancollege.test2;
+
 public class Address {
     //address, city, postalCode, and state.
     private String address;
