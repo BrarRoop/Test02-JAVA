@@ -13,7 +13,7 @@ public class User {
     private String email;
     private String phone;
     private String birthDate;
-    private Address[] addresses;
+    private String addresses;
     private String image;
 
     @SerializedName("University")
@@ -54,7 +54,7 @@ public class User {
         return birthDate;
     }
 
-    public Address[] getAddress() {
+    public String getAddress() {
         return addresses;
     }
 

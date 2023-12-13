@@ -1,39 +1,23 @@
-package com.georgiancollege.test2;
-
 public class Address {
-    private String streetAddress;
+    //address, city, postalCode, and state.
+    private String address;
     private String city;
+    private String postalCode;
     private String state;
-    private String zipCode;
-    private String country;
 
-    // Constructor
-    public Address(String streetAddress, String city, String state, String zipCode, String country) {
-        this.streetAddress = streetAddress;
-        this.city = city;
-        this.state = state;
-        this.zipCode = zipCode;
-        this.country = country;
-    }
-
-    // Getters for instance variables
-    public String getStreetAddress() {
-        return streetAddress;
+    public String getAddress() {
+        return address;
     }
 
     public String getCity() {
         return city;
     }
 
+    public String getPostalCode() {
+        return postalCode;
+    }
+
     public String getState() {
         return state;
-    }
-
-    public String getZipCode() {
-        return zipCode;
-    }
-
-    public String getCountry() {
-        return country;
     }
 }
