@@ -1,5 +1,4 @@
-import com.google.gson.annotations.SerializedName;
-import address.Address; // Import the Address class from the address package
+package com.georgiancollege.test2;
 
 public class User {
     private int id;
@@ -28,7 +27,7 @@ public class User {
         this.address = address;
     }
 
-    // Get methods for instance variables
+    // Getters for instance variables
     public int getId() {
         return id;
     }
