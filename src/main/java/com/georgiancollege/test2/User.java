@@ -1,33 +1,31 @@
 package com.georgiancollege.test2;
 
+import com.google.gson.annotations.SerializedName;
+
 public class User {
+    //id, first name, last name, age, email,phone, birth date, university, image, and the address
     private int id;
+    @SerializedName("FirstName")
     private String firstName;
+    @SerializedName("LastName")
     private String lastName;
     private int age;
     private String email;
     private String phone;
     private String birthDate;
-    private String university;
+    private Address[] addresses;
     private String image;
-    private Address address;
 
-    // Constructor
-    public User(int id, String firstName, String lastName, int age, String email, String phone, String birthDate,
-                String university, String image, Address address) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-        this.email = email;
-        this.phone = phone;
-        this.birthDate = birthDate;
-        this.university = university;
-        this.image = image;
-        this.address = address;
+    @SerializedName("University")
+    private String university;
+
+
+
+    public String getUniversity() {
+        return university;
     }
 
-    // Getters for instance variables
+
     public int getId() {
         return id;
     }
@@ -56,15 +54,12 @@ public class User {
         return birthDate;
     }
 
-    public String getUniversity() {
-        return university;
+    public Address[] getAddress() {
+        return addresses;
     }
 
     public String getImage() {
         return image;
     }
 
-    public Address getAddress() {
-        return address;
-    }
 }
