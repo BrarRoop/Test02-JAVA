@@ -1,4 +1,5 @@
-package com.georgiancollege.test2;
+import com.google.gson.annotations.SerializedName;
+import address.Address; // Import the Address class from the address package
 
 public class User {
     private int id;
@@ -10,7 +11,7 @@ public class User {
     private String birthDate;
     private String university;
     private String image;
-    private Address address; // Using a separate Address class for address information
+    private Address address;
 
     // Constructor
     public User(int id, String firstName, String lastName, int age, String email, String phone, String birthDate,
@@ -66,49 +67,5 @@ public class User {
 
     public Address getAddress() {
         return address;
-    }
-
-    // Inner Address class to hold address information
-    public static class Address {
-        @SerializedName("street_address")
-        private String streetAddress;
-        @SerializedName("city")
-        private String city;
-        @SerializedName("state")
-        private String state;
-        @SerializedName("zip_code")
-        private String zipCode;
-        @SerializedName("country")
-        private String country;
-
-        // Constructor
-        public Address(String streetAddress, String city, String state, String zipCode, String country) {
-            this.streetAddress = streetAddress;
-            this.city = city;
-            this.state = state;
-            this.zipCode = zipCode;
-            this.country = country;
-        }
-
-        // Get methods for address variables
-        public String getStreetAddress() {
-            return streetAddress;
-        }
-
-        public String getCity() {
-            return city;
-        }
-
-        public String getState() {
-            return state;
-        }
-
-        public String getZipCode() {
-            return zipCode;
-        }
-
-        public String getCountry() {
-            return country;
-        }
     }
 }

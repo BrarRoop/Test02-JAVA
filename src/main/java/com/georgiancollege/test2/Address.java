@@ -1,13 +1,10 @@
 package com.georgiancollege.test2;
 
 public class Address {
-    @SerializedName("street_address")
     private String streetAddress;
     private String city;
     private String state;
-    @SerializedName("zip_code")
     private String zipCode;
-    @SerializedName("country")
     private String country;
 
     // Constructor
