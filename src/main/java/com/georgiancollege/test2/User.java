@@ -3,7 +3,7 @@ package com.georgiancollege.test2;
 import com.google.gson.annotations.SerializedName;
 
 public class User {
-    //id, first name, last name, age, email,phone, birth date, university, image, and the address
+    //id, first name, last name, age, email,phone, birthdate, university, image, and the address
     private int id;
     @SerializedName("FirstName")
     private String firstName;
